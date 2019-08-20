@@ -36,6 +36,16 @@ public class Coordinate {
 		return y;
 	}
 	
+	public double getDX()
+	{
+		return dx;
+	}
+	
+	public double getDY()
+	{
+		return dy;
+	}
+	
 	public String toString()
 	{
 		return "(" + Double.toString(x) + ", " + Double.toString(y) + ")";	
