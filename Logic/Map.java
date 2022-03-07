@@ -1,6 +1,7 @@
 package Logic;
 
 import java.lang.Math;
+//import java.util.Arrays;
 
 public class Map {
 	Coordinate Grid[][];
@@ -44,6 +45,25 @@ public class Map {
 		//finds the angle the robot needs to move in
 		double theta = java.lang.Math.atan2((coordianteB.getY()-coordinateA.getY()), (coordianteB.getX()-coordinateA.getX()));
 		return theta;
+	}
+	
+	public String toString()
+	{
+		String output = "";
+		//return Arrays.deepToString(this.Grid).replace("], ", "]\n").replaceAll("true", "X").replaceAll("false", " ").replaceAll(",", " ");
+		for (int i = 0; i < this.Grid.length; i++)
+		{
+			output += "[ ";
+			for(int j = 0; j < Grid[i].length; j++)
+			{
+				output += Grid[j][i].getName();
+				output += ", ";
+			}
+			output += "]\n";
+			
+			
+		}
+		return output;
 	}
 	
 	public Coordinate field(Robot robot, FieldObject target)

@@ -55,7 +55,7 @@ public class Robot {
 				this.position.setY(nY);
 			}
 	//Function for moving robot with a coordinate object
-	public void move(Coordinate move)
+	public void move(Coordinate move, Map m)
 	{
 
 //TODO clean up this function (better variable names)
@@ -85,6 +85,8 @@ public class Robot {
 		this.position.setY(nY);
 		System.out.println("Y: " + this.position.getY());
 		vMap.addLoc(this.position.getX(), this.position.getY());
+		m.Grid[this.position.getX()][this.position.getY()].setName("X");
+		
 		
 	}
 
