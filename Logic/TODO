@@ -1,0 +1,8 @@
+Takes XY coordiantes of goal and robot, finds movement vector in that field.
+
+(Will need to do the same for all fields, then add the resulting vectors together)
+
+
+Then tranforms vector into a square coordiantes to indacte the displacement of the robot
+
+Then adds displacemtn to the robot's current coordinates to make it move.
