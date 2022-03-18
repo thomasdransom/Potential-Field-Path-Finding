@@ -8,12 +8,15 @@ public class FieldObject
 	double radius,spread,scaling;
 	Coordinate position;
 	
-	public FieldObject(Coordinate pIn, double rIn, double sIn, double aIn)
+	public FieldObject(int xIn, int yIn, double rIn, double sIn, double aIn, Map mIn)
 	{	
-		position=pIn;
+	
 		radius=rIn;
 		spread=sIn;
 		scaling=aIn;
+		
+		position = mIn.Grid[yIn][xIn];
+		mIn.fieldObjects.add(this);
 	}
 	//Class exists for future tidying and streamlining of the field process after the core behaviour has been achieved
 }

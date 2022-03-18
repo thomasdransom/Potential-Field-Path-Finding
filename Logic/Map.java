@@ -2,11 +2,13 @@ package Logic;
 
 import java.lang.Math;
 //import java.util.Arrays;
+import java.util.ArrayList;
 
 public class Map {
 	Coordinate Grid[][];
 	int xSize;
 	int ySize;
+	ArrayList<FieldObject> fieldObjects;
 	
 	Map(int x, int y){
 		Grid = new Coordinate[x][y];
@@ -21,6 +23,7 @@ public class Map {
 				Grid[i][j] = new Coordinate(i,j);
 			}
 		}
+		 fieldObjects = new ArrayList<FieldObject>();
 	}
 	
 	
@@ -108,21 +111,20 @@ public class Map {
 				dy = target.scaling*(distance-target.radius)*java.lang.Math.cos(theta)*robot.integrator;
 				return new Coordinate(dx,dy);
 			}
-			//if r<d<=s+r then dx = a(d-r)cos(theta) and dy = a(d-r)sin(theta)
 		}
 		else
 		{
 			if(target.radius < distance && distance < (target.spread+target.radius) && theta >= 0)
 			{
 				//System.out.println(g.a + "," + d + "," + g.r + ", t: " + theta + "," + java.lang.Math.acos(theta));
-				dx = (target.scaling*java.lang.Math.cos(theta)*robot.integrator)/Math.pow(distance, 2);
-				dy = (target.scaling*java.lang.Math.sin(theta)*robot.integrator)/Math.pow(distance, 2);
+				dx = (target.scaling*java.lang.Math.cos(theta)*robot.integrator)/Math.pow(distance/10, 2);
+				dy = (target.scaling*java.lang.Math.sin(theta)*robot.integrator)/Math.pow(distance/10, 2);
 				return new Coordinate(dx,dy);
 			}
 			else if(target.radius < distance && distance < (target.spread+target.radius) && theta<0)
 			{
-				dx = (target.scaling*java.lang.Math.sin(theta)*robot.integrator)/Math.pow(distance, 2);
-				dy = (target.scaling*java.lang.Math.cos(theta)*robot.integrator)/Math.pow(distance, 2);
+				dx = (target.scaling*java.lang.Math.sin(theta)*robot.integrator)/Math.pow(distance/10, 2);
+				dy = (target.scaling*java.lang.Math.cos(theta)*robot.integrator)/Math.pow(distance/10, 2);
 				return new Coordinate(dx,dy);
 			}
 		}

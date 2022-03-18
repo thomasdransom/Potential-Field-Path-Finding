@@ -2,13 +2,13 @@ package Logic;
 
 public class Obstacle extends FieldObject{
 
-	public Obstacle(Coordinate pIn, double rIn, double sIn, double aIn) {
-		super(pIn, rIn, sIn, aIn );
-		position=pIn;
-		radius=rIn;
-		spread=sIn;
+	public Obstacle(int xIn, int yIn, double rIn, double sIn, double aIn, Map mIn) {
+		super(xIn, yIn, rIn, sIn, aIn, mIn );
+		
 		scaling=-aIn;
-	
+		this.position.setName("O");
+		
+		
 	}
 	
 
