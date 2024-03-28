@@ -15,24 +15,25 @@ public class Main {
 	
 	Coordinate start = testMap.Grid[10][1];
 	start.setName("S");
-	Goal testGoal = new Goal(20,20,0.5,100,0.1,testMap);
+	Goal testGoal = new Goal(25,35,0.5,100,0.1,testMap);
 	
 	//(Starting position, mapsize x, mapsize y)
 	Robot testRobo = new Robot(start, mapSize, mapSize);
 	
 	//(X, Y, radius, spread, scaling, map)
+	
 	Obstacle obstacle1 = new Obstacle(11, 13, 0.5, 3, 0.005, testMap);
 	Obstacle obstacle2 = new Obstacle(11, 14, 0.5, 3, 0.005, testMap);
 	Obstacle obstacle3 = new Obstacle(11, 15, 0.5, 3, 0.005, testMap);
 	Obstacle obstacle4 = new Obstacle(11, 16, 0.5, 3, 0.005, testMap);
-	//Obstacle obstacle5 = new Obstacle(11, 17, 0.5, 5, 0.01, testMap);
-	//Obstacle obstacle6 = new Obstacle(11, 18, 0.5, 5, 0.01, testMap);
+	Obstacle obstacle5 = new Obstacle(11, 17, 0.5, 5, 0.005, testMap);
+	Obstacle obstacle6 = new Obstacle(11, 18, 0.5, 5, 0.005, testMap);
 	Obstacle obstacle7 = new Obstacle(11, 19, 0.5, 3, 0.005, testMap);
 	Obstacle obstacle8 = new Obstacle(11, 20, 0.5, 3, 0.005, testMap);
 	Obstacle obstacle9 = new Obstacle(11, 21, 0.5, 3, 0.005, testMap);
 	Obstacle obstacle10 = new Obstacle(11, 22, 0.5, 3, 0.005, testMap);
 	Obstacle obstacle11 = new Obstacle(11, 23, 0.5, 3, 0.005, testMap);
-
+		
 		
 	
 	//To avoid the robot getting stuck the size of the goal should be <1

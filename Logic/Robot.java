@@ -22,6 +22,7 @@ public class Robot {
 		notAtGoal = false;
 	}
 	
+	//Checks if robot shares the same positon as a field onject
 	public boolean eQ(FieldObject o)
 	{
 		if (this.position.getX() == o.position.getX() && this.position.getY() == o.position.getY())
@@ -43,7 +44,7 @@ public class Robot {
 				{
 					if(this.integrator >= 1) 
 					{
-						this.integrator = -0.1;
+						this.integrator = 1;
 					}
 					else
 					{
